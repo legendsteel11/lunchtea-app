@@ -1,5 +1,7 @@
 # LunchTea
 
+**[lunchtea-app.vercel.app](https://lunchtea-app.vercel.app/)**
+
 ![LunchTea](public/screenshots/hero.png)
 
 작업 중 기다려야 할 때, 잠깐 차 한잔 하고 가세요.

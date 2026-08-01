@@ -26,7 +26,7 @@ const href = `${repo}/releases/download/v${version}/${file}`
  * 복사하면 유입 표시가 따라 퍼져서, 나중에 그 사람이 PC에서 연 것까지 원래
  * 채널에서 온 것으로 잡힌다.
  */
-const site = ''
+const site = 'https://lunchtea-app.vercel.app/'
 
 const siteLabel = computed(() => site.replace(/^https?:\/\//, '').replace(/\/$/, ''))
 
