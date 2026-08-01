@@ -22,7 +22,7 @@ const dict = {
       download: '다운로드',
     },
     hero: {
-      eyebrow: 'Windows 데스크톱 토이',
+      eyebrow: 'Windows 데스크톱 토이 프로젝트',
       title: 'LunchTea',
       tagline: '작업 중 기다려야 할 때, 잠깐 차 한잔 하고 가세요.',
       cta: '다운로드',
@@ -93,7 +93,11 @@ const dict = {
     },
     notice: {
       title: '드리는 말씀',
-      items: ['개발 초기입니다. 앞으로 더 지켜봐 주세요.', '소중한 피드백을 기다리고 있습니다.'],
+      items: [
+        '1인 개인 개발자입니다.',
+        '개발 초기입니다. 앞으로 더 지켜봐 주세요.',
+        '소중한 피드백을 기다리고 있습니다.',
+      ],
     },
     footer: {
       contact: '문의',
@@ -111,7 +115,7 @@ const dict = {
       download: 'Download',
     },
     hero: {
-      eyebrow: 'A desktop toy for Windows',
+      eyebrow: 'A desktop toy project for Windows',
       title: 'LunchTea',
       tagline: 'While you wait on something at work, stop by for a cup of tea.',
       cta: 'Download',
@@ -182,7 +186,11 @@ const dict = {
     },
     notice: {
       title: 'Two notes',
-      items: ['These are early days. Stick around and see where it goes.', 'Feedback is very welcome.'],
+      items: [
+        'Made by one person.',
+        'These are early days. Stick around and see where it goes.',
+        'Feedback is very welcome.',
+      ],
     },
     footer: {
       contact: 'Contact',
