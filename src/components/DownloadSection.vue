@@ -11,7 +11,7 @@ import { t } from '../i18n'
  */
 const repo = 'https://github.com/legendsteel11/lunchtea-app'
 const version = '0.7.0'
-const size = '25 MB'
+const size = '30 MB'
 
 const file = `LunchTea-${version}-win-x64.zip`
 const href = `${repo}/releases/download/v${version}/${file}`
@@ -25,7 +25,7 @@ const href = `${repo}/releases/download/v${version}/${file}`
  *
  * 올린 뒤 여기 한 곳을 <c>true</c>로 바꾼다.
  */
-const ready = false
+const ready = true
 
 /**
  * 이 사이트의 주소. <b>Vercel이 주소를 내주면 채운다.</b>
