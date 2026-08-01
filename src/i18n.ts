@@ -99,7 +99,11 @@ const dict = {
       // 이 한 줄만 밝게 세운다. "시험판"이라는 딱지 대신 <b>지금 어디쯤인지</b>를
       // 말하는 자리다 — 딱지는 받을지 말지를 가르지만, 이 말은 지금 받은 것이
       // 계속 나아진다는 쪽으로 읽힌다.
-      highlight: '아직 개발 초기입니다. 계속 만들어 나가겠습니다.',
+      //
+      // "아직 개발 초기입니다"에서 옮겼다(2026-08-01). <b>같은 사실인데
+      // 한쪽은 기대를 낮춘다</b> — "초기"는 덜 됐다는 말이라 받기 직전에
+      // 망설일 이유가 되고, "진행중"은 계속 나온다는 쪽으로 읽힌다.
+      highlight: '개발 진행중인 프로젝트입니다. 계속 만들어 나가겠습니다.',
       items: [
         '1인 개인 개발자입니다.',
         '소중한 피드백을 기다리고 있습니다.',
@@ -194,7 +198,7 @@ const dict = {
     },
     notice: {
       title: 'Two notes',
-      highlight: 'These are early days. I will keep building it.',
+      highlight: 'This project is under active development. I will keep building it.',
       items: [
         'Made by one person.',
         'Feedback is very welcome.',
