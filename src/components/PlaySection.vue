@@ -13,7 +13,6 @@ import { t } from '../i18n'
            여섯 줄이라 높이가 안 맞고, 그 어긋남이 <b>둘 중 하나가 덜 채워진
            것</b>처럼 보였다. 같은 성격의 표라 위아래로 쭉 이어 두는 편이 낫다. -->
       <div class="card panel">
-        <h3>{{ t.play.controlsTitle }}</h3>
         <dl>
           <template v-for="row in t.play.controls" :key="row[0]">
             <dt>{{ row[0] }}</dt>

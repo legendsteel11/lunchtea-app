@@ -9,6 +9,11 @@ import { t } from '../i18n'
     <div class="container">
       <div class="note card">
         <h2>{{ t.notice.title }}</h2>
+
+        <!-- 첫 줄에 세운다. 목록 가운데에 끼워 두고 밝기만 올리면 <b>왜 저것만
+             밝은지</b>가 안 읽혀서 강조가 아니라 어긋남으로 보인다. -->
+        <p class="highlight">{{ t.notice.highlight }}</p>
+
         <p v-for="line in t.notice.items" :key="line">{{ line }}</p>
       </div>
     </div>
@@ -38,5 +43,19 @@ h2 {
 p {
   font-size: 14.5px;
   line-height: 1.9;
+}
+
+/* <b>밝기로만 세운다.</b> 굵게 하거나 더 키우면 경고문이 되고, 그러면 받기
+   직전에 망설일 이유를 주는 자리가 된다. 여기서 할 일은 <b>지금 어디쯤인지</b>를
+   먼저 눈에 들어오게 하는 것까지다. */
+.highlight {
+  margin-bottom: 10px;
+  padding-bottom: 12px;
+  font-size: 15.5px;
+  color: var(--text-strong);
+
+  /* 아래 두 줄과 갈라 두는 선. 점선 테두리와 같은 색이라 이 카드 안에서
+     새로 생긴 선으로 보이지 않는다. */
+  border-bottom: 1px solid var(--border);
 }
 </style>

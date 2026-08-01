@@ -17,8 +17,8 @@ export function toggleLang() {
 const dict = {
   ko: {
     nav: {
-      about: '무엇인가요',
-      play: '조작',
+      about: '런치티란?',
+      play: '사용법',
       download: '다운로드',
     },
     hero: {
@@ -34,37 +34,37 @@ const dict = {
       soon: 'Coming soon',
     },
     about: {
-      title: '무엇인가요',
+      title: '런치티란?',
+      lead: '일하는 화면 한켠에 띄워 두는 작은 소품 모음입니다.',
       items: [
         {
           title: '기다리는 시간에',
-          desc: 'AI가 답을 만드는 동안, 렌더링이나 컴파일을 걸어 둔 동안. 유튜브를 켜기엔 애매한 그 몇 분에, 작은 창 하나에서 무언가 계속 일어납니다. 보고만 있어도 되고 끼어들어도 됩니다.',
+          desc: 'AI가 답을 만드는 동안, 렌더링이나 컴파일을 걸어 둔 동안. 커서를 옮겨 잠깐 휴식하세요.',
         },
         {
-          title: '마우스만 대면 됩니다',
-          desc: '창에 마우스를 가져가 보세요. 작고 깜찍한 일이 벌어집니다. 일로 돌아갈 때는 마우스를 빼기만 하면 됩니다 — 저장도 종료도 없습니다.',
+          title: '커서만 가져가면 됩니다',
+          desc: '작고 깜찍한 일이 벌어져요. 일로 돌아갈 때는 커서를 빼기만 하면 돼요 — 저장도 종료도 없습니다.',
         },
         {
-          title: '멍때리기 좋은 창',
-          desc: '머리가 복잡할 때 잠깐 쳐다보기 좋습니다. 아무것도 안 하고 있어도 화면 안에서는 계속 뭔가 벌어지고 있습니다.',
+          title: '잠시 멍때리기 좋은.',
+          desc: '머리가 복잡할 때 잠깐 쳐다보세요. 아무것도 안 하고 있어도 화면 안에서는 계속 뭔가 벌어지고 있어요.',
         },
         {
-          title: '창은 편한 대로',
-          desc: '크기와 자리를 마음대로 바꾸고 소리도 켜고 끕니다. 제목 표시줄 없이 얹어 두는 오버레이 모드도 있습니다.',
+          title: '편한 위치, 편한 크기로',
+          desc: '크기도 자리도 마음대로 바꾸고, 소리도 켰다 껐다 할 수 있어요. 오버레이 모드로도 쓸 수 있고요.',
         },
         {
-          title: '덤으로 손목 운동',
-          desc: '마우스 감도 시험이 될지도 모릅니다. 손목 운동도요.',
+          title: '덤으로 손목 운동(?)',
+          desc: '마우스 감도 테스트용, 혹은 손목 운동이 될지도 몰라요…(제 생각입니다)',
         },
         {
-          title: '하나씩 늘어납니다',
-          desc: '한 프로그램 안에 여러 개가 들어갑니다. 나중에는 그날 마음에 드는 것으로 골라서 놀면 됩니다.',
+          title: '하나씩 늘어날 예정입니다.',
+          desc: '한 프로그램 안에 여러 개가 들어갑니다. 나중에는 그날 마음에 드는 것으로 골라 쓸 수 있어요.',
         },
       ],
     },
     play: {
-      title: '조작',
-      controlsTitle: '노는 법',
+      title: '사용법',
       controls: [
         ['커서를 창 안으로', '시작합니다'],
         ['마우스 이동', '커서를 직접 움직이면 됩니다'],
@@ -93,9 +93,13 @@ const dict = {
     },
     notice: {
       title: '드리는 말씀',
+
+      // 이 한 줄만 밝게 세운다. "시험판"이라는 딱지 대신 <b>지금 어디쯤인지</b>를
+      // 말하는 자리다 — 딱지는 받을지 말지를 가르지만, 이 말은 지금 받은 것이
+      // 계속 나아진다는 쪽으로 읽힌다.
+      highlight: '아직 개발 초기입니다. 계속 만들어 나가겠습니다.',
       items: [
         '1인 개인 개발자입니다.',
-        '개발 초기입니다. 앞으로 더 지켜봐 주세요.',
         '소중한 피드백을 기다리고 있습니다.',
       ],
     },
@@ -110,8 +114,8 @@ const dict = {
 
   en: {
     nav: {
-      about: 'What it is',
-      play: 'Controls',
+      about: 'What is LunchTea?',
+      play: 'How to use',
       download: 'Download',
     },
     hero: {
@@ -127,37 +131,37 @@ const dict = {
       soon: 'Coming soon',
     },
     about: {
-      title: 'What it is',
+      title: 'What is LunchTea?',
+      lead: 'A set of small things you keep open in a corner of your screen while you work.',
       items: [
         {
           title: 'For the waiting',
-          desc: 'While an AI is writing its answer, while a render or a build is running. For those few minutes that are too short to open YouTube, something keeps happening in one small window. Watch it, or join in.',
+          desc: 'While an AI is writing its answer, while a render or a build is running. Move your cursor over and take a short break.',
         },
         {
-          title: 'Just move your mouse over',
-          desc: 'Bring the cursor into the window and something small and silly happens. To get back to work, move the cursor out — nothing to save, nothing to close.',
+          title: 'Just bring the cursor over',
+          desc: 'Something small and silly happens. To get back to work, move the cursor out — nothing to save, nothing to close.',
         },
         {
-          title: 'A window to stare at',
-          desc: 'Good for the moments when your head is full. Even when you do nothing, something is still going on in there.',
+          title: 'A place to zone out.',
+          desc: 'Take a look when your head is full. Even when you do nothing, something is still going on in there.',
         },
         {
-          title: 'Your window, your way',
-          desc: 'Resize it, move it, mute it. There is an overlay mode that drops the title bar and just sits on top.',
+          title: 'Any size, any spot',
+          desc: 'Resize it, move it, mute it. It works as an overlay too.',
         },
         {
-          title: 'And a bit of wrist exercise',
-          desc: 'It may double as a mouse sensitivity test. And wrist exercise.',
+          title: 'And a bit of wrist exercise (?)',
+          desc: 'It may double as a mouse sensitivity test. Or wrist exercise… (that is just my theory)',
         },
         {
-          title: 'One at a time',
+          title: 'More are on the way.',
           desc: 'More of them will live inside the same program. Later you can pick whichever one you feel like that day.',
         },
       ],
     },
     play: {
       title: 'Controls',
-      controlsTitle: 'How it works',
       controls: [
         ['Cursor into the window', 'It starts'],
         ['Move the mouse', 'You move the cursor, that is all'],
@@ -186,9 +190,9 @@ const dict = {
     },
     notice: {
       title: 'Two notes',
+      highlight: 'These are early days. I will keep building it.',
       items: [
         'Made by one person.',
-        'These are early days. Stick around and see where it goes.',
         'Feedback is very welcome.',
       ],
     },
