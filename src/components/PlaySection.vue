@@ -39,7 +39,7 @@ import { t } from '../i18n'
 
 <style scoped>
 .panel {
-  max-width: 720px;
+  max-width: var(--panel);
   margin: 0 auto;
   padding: 28px 30px 26px;
 }

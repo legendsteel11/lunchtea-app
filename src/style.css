@@ -21,6 +21,11 @@
   --toy-4: #6eaaf0;
   --toy-5: #be8ce6;
 
+  /* 가운데에 세우는 상자들의 폭. <b>한 곳에서 정한다</b> — 조작·다운로드·
+     드리는 말씀이 저마다 다른 폭이면 아래로 내려가면서 상자가 들쭉날쭉해
+     하나가 잘못 놓인 것처럼 보인다. */
+  --panel: 660px;
+
   color-scheme: dark;
   font: 16px/1.7 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',

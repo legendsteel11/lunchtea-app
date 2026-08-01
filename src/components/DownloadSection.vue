@@ -63,7 +63,7 @@ function trackDownload() {
 }
 
 .box {
-  max-width: 620px;
+  max-width: var(--panel);
   margin: 0 auto;
   padding: 36px 28px 30px;
   text-align: center;

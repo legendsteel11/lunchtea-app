@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { inject } from '@vercel/analytics'
 import AppHeader from './components/AppHeader.vue'
+import DriftingSquare from './components/DriftingSquare.vue'
 import HeroSection from './components/HeroSection.vue'
 import ComingSoonSlots from './components/ComingSoonSlots.vue'
 import AboutSection from './components/AboutSection.vue'
@@ -13,6 +14,7 @@ inject()
 </script>
 
 <template>
+  <DriftingSquare />
   <AppHeader />
   <main>
     <HeroSection />

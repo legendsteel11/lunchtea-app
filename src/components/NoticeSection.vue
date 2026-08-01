@@ -17,7 +17,7 @@ import { t } from '../i18n'
 
 <style scoped>
 .note {
-  max-width: 560px;
+  max-width: var(--panel);
   margin: 0 auto;
   padding: 26px 28px;
   text-align: center;
