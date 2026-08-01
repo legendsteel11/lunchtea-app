@@ -92,6 +92,33 @@ const dict = {
       install: '설치가 필요 없습니다. 압축을 풀고 <code>LunchTea.exe</code>를 누르면 바로 시작합니다.',
       firstRun:
         '처음 실행하면 Windows가 확인 창을 띄웁니다 — <b>추가 정보 → 실행</b>을 누르면 됩니다.',
+
+      // ── 업데이트 내역 ──
+      //
+      // 새 판이 나오면 **맨 위에** 한 덩이를 얹는다. 지난 판은 지우지 않는다 —
+      // 꺾쇠로 넘겨 본다. DownloadSection이 지금 올라간 버전보다 높은 덩이는
+      // 감추므로, 파일을 올리기 전에 미리 적어 두어도 광고가 앞서 나가지 않는다.
+      //
+      // **새로 생긴 것만 적는다.** 고친 자리는 받는 사람에게 "그동안 고장나
+      // 있었다"로만 읽힌다.
+      //
+      // 지금은 비어 있다 — **첫 판이라 견줄 지난 판이 없다.** 비어 있으면
+      // 카드 자체가 안 나온다. 다음 판을 낼 때 여기 한 덩이를 얹는다.
+      notesTitle: '업데이트 내역',
+
+      // 꺾쇠 단추를 읽어 주는 이름. 화면에는 안 보이고 스크린리더만 읽는다.
+      notesOlder: '이전 업데이트 내역',
+      notesNewer: '다음 업데이트 내역',
+
+      notes: [] as Array<{ version: string; items: string[] }>,
+
+      // ── 폰으로 들어온 사람 ──
+      //
+      // 받을 수 없다는 사실은 어차피 곧 알게 된다. 문제는 그때 **손에 아무것도
+      // 없다는 것**이라, 못 받는다고 말하는 대신 주소를 쥐여 준다.
+      mobileNote: 'Windows에서 쓰는 앱입니다.\n주소를 복사해 두었다가 PC에서 열어보세요.',
+      copyLink: '주소 복사',
+      copied: '복사했습니다',
     },
     notice: {
       title: '드리는 말씀',
@@ -195,6 +222,18 @@ const dict = {
       install: 'No installer. Unzip and run <code>LunchTea.exe</code>.',
       firstRun:
         'Windows may show a SmartScreen prompt the first time — choose <b>More info → Run</b>.',
+
+      notesTitle: 'Update notes',
+      notesOlder: 'Older update notes',
+      notesNewer: 'Newer update notes',
+
+      // 한국어 쪽 덩이와 <b>수가 같아야 한다.</b> 언어를 바꿔도 보던 자리가
+      // 그대로 유지되는 것이 그 전제다.
+      notes: [] as Array<{ version: string; items: string[] }>,
+
+      mobileNote: 'LunchTea runs on Windows.\nCopy the link and open it on your PC.',
+      copyLink: 'Copy link',
+      copied: 'Copied',
     },
     notice: {
       title: 'Two notes',
