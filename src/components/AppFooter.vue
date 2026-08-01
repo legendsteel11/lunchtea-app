@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { t } from '../i18n'
 
-const EMAIL = 'legendsteel11@gmail.com'
+// 밖으로 내놓는 주소는 TabStick·Edgetree와 같은 것을 쓴다. 앱마다 다르면
+// 답장이 어디로 갔는지 사람이 기억해야 한다.
+const EMAIL = 'pjh85336@gmail.com'
 </script>
 
 <template>

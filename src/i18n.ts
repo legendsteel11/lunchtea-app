@@ -80,6 +80,7 @@ const dict = {
         ['F12', '볼륨'],
         ['Shift + Esc', '종료'],
       ],
+      menuNote: '제목 표시줄을 우클릭하면 설정을 바꾸거나 단축키를 볼 수 있습니다.',
     },
     download: {
       title: '다운로드',
@@ -168,6 +169,7 @@ const dict = {
         ['F12', 'Volume'],
         ['Shift + Esc', 'Quit'],
       ],
+      menuNote: 'Right-click the title bar to change settings or see the shortcuts.',
     },
     download: {
       title: 'Download',

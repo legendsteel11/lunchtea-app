@@ -28,6 +28,10 @@ import { t } from '../i18n'
               <dd>{{ row[1] }}</dd>
             </template>
           </dl>
+
+          <!-- 키를 외우지 않아도 되는 길이 있다는 것을 <b>키 표 바로 아래</b>에
+               적는다. 표만 있으면 이 여섯을 기억해야 하는 줄 알게 된다. -->
+          <p class="note">{{ t.play.menuNote }}</p>
         </div>
       </div>
     </div>
@@ -82,6 +86,14 @@ dd {
    두 칸이 나란히 서게 한다. */
 .keys {
   grid-template-columns: 96px 1fr;
+}
+
+.note {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  opacity: 0.85;
 }
 
 @media (max-width: 480px) {
