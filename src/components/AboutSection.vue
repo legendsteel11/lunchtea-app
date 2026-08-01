@@ -27,6 +27,11 @@ import { t } from '../i18n'
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 14px;
+
+  /* <b>여섯 칸이 전부 같은 높이다.</b> 그냥 두면 같은 줄끼리만 키가 맞고
+     줄이 바뀌면 달라져서, 글이 짧은 칸은 아래가 빈 것이 아니라 <b>덜 만든
+     칸</b>으로 보인다. 줄 높이를 1fr로 두면 제일 긴 줄에 나머지가 맞는다. */
+  grid-auto-rows: 1fr;
 }
 
 .item {

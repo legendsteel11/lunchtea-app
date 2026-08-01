@@ -54,12 +54,12 @@ const dict = {
           desc: '크기도 자리도 마음대로 바꾸고, 소리도 켰다 껐다 할 수 있어요. 오버레이 모드로도 쓸 수 있고요.',
         },
         {
-          title: '덤으로 손목 운동(?)',
-          desc: '마우스 감도 테스트용, 혹은 손목 운동이 될지도 몰라요…(제 생각입니다)',
-        },
-        {
           title: '하나씩 늘어날 예정입니다.',
           desc: '한 프로그램 안에 여러 개가 들어갑니다. 나중에는 그날 마음에 드는 것으로 골라 쓸 수 있어요.',
+        },
+        {
+          title: '소소한 덤',
+          desc: '마우스 감도 테스트, 혹은 손목 운동이 될지도 몰라요…(개인적인 생각일 뿐입니다)',
         },
       ],
     },
@@ -151,12 +151,12 @@ const dict = {
           desc: 'Resize it, move it, mute it. It works as an overlay too.',
         },
         {
-          title: 'And a bit of wrist exercise (?)',
-          desc: 'It may double as a mouse sensitivity test. Or wrist exercise… (that is just my theory)',
-        },
-        {
           title: 'More are on the way.',
           desc: 'More of them will live inside the same program. Later you can pick whichever one you feel like that day.',
+        },
+        {
+          title: 'A small bonus',
+          desc: 'A mouse sensitivity test, or wrist exercise… (just a personal theory)',
         },
       ],
     },
