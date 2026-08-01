@@ -17,7 +17,7 @@ const missing = ref(false)
  * 그것을 빌드 때 챙길 파일로 보고 찾다가, 없으면 <b>빌드가 실패한다</b>. 이 그림은
  * 나중에 들어올 수 있으므로 그러면 안 된다 — 묶어서 넘기면 그냥 주소로 지나간다.
  */
-const shot = '/screenshots/hero.gif'
+const shot = '/screenshots/hero.png'
 </script>
 
 <template>
@@ -108,7 +108,9 @@ h1 {
 .placeholder {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 14px;
+
+  /* 모서리를 안 굴린다. 이 그림은 <b>창 하나를 통째로 찍은 것</b>이라,
+     굴리면 창이 아니라 카드로 보인다 — 실제 화면에서는 네모난 창이다. */
   border: 1px solid var(--border);
   background: #090c12;
   object-fit: cover;

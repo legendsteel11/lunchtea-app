@@ -5,10 +5,8 @@ import { t } from '../i18n'
 <template>
   <section class="soon">
     <div class="container">
-      <div class="section-heading">
-        <h2>{{ t.soon.title }}</h2>
-      </div>
-
+      <!-- 제목을 뺐다. 빈 칸 셋이 이미 <b>아직 셋이 남았다</b>고 말하고
+           있어서, 위에 같은 말을 글로 한 번 더 적으면 설명이 된다. -->
       <div class="slots">
         <!-- 첫 칸만 채워져 있다. 나머지 셋이 비어 있는 것이 이 줄의 전부다 —
              "하나 나왔고 셋이 남았다"를 글로 쓰지 않고 자리로 말한다. -->
