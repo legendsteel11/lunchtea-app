@@ -25,8 +25,6 @@ const dict = {
       eyebrow: 'Windows 데스크톱 토이 프로젝트',
       title: 'LunchTea',
       tagline: '작업 중 기다려야 할 때, 잠깐 차 한잔 하고 가세요.',
-      cta: '다운로드',
-      ctaNote: 'Windows 10 · 11 (64-bit)',
       shot: '화면',
     },
     soon: {
@@ -88,6 +86,11 @@ const dict = {
       // 섹션 제목은 뺐다(2026-08-01). 위쪽 메뉴·제목·단추에 같은 말이 세 번
       // 겹쳤고, 받는 자리는 단추 하나로 이미 분명하다.
       button: '다운로드',
+
+      // 파일이 아직 안 올라갔을 때. <b>단추를 감추지 않고 눌리지 않게</b>
+      // 둔다 — 없으면 받는 자리가 통째로 사라져서 이 페이지가 무엇을
+      // 주는 곳인지 흐려지고, 곧 생긴다는 것도 전할 수 없다.
+      pending: '준비 중입니다',
       version: '버전',
       requirements: 'Windows 10 · 11 (64-bit)',
       install: '설치가 필요 없습니다. 압축을 풀고 <code>LunchTea.exe</code>를 누르면 바로 시작합니다.',
@@ -156,8 +159,6 @@ const dict = {
       eyebrow: 'A desktop toy project for Windows',
       title: 'LunchTea',
       tagline: 'While you wait on something at work, stop by for a cup of tea.',
-      cta: 'Download',
-      ctaNote: 'Windows 10 · 11 (64-bit)',
       shot: 'Screen',
     },
     soon: {
@@ -217,6 +218,7 @@ const dict = {
     },
     download: {
       button: 'Download',
+      pending: 'Coming soon',
       version: 'Version',
       requirements: 'Windows 10 · 11 (64-bit)',
       install: 'No installer. Unzip and run <code>LunchTea.exe</code>.',

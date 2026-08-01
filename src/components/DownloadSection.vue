@@ -17,6 +17,17 @@ const file = `LunchTea-${version}-win-x64.zip`
 const href = `${repo}/releases/download/v${version}/${file}`
 
 /**
+ * 파일이 릴리즈에 올라갔는지.
+ *
+ * <b>거짓이면 단추가 "준비 중입니다"로 서고 눌리지 않는다.</b> 올리기 전에
+ * 켜 두면 링크가 조용히 404가 되는데, 페이지는 멀쩡해 보여서 <b>받으려는
+ * 사람만</b> 그것을 안다.
+ *
+ * 올린 뒤 여기 한 곳을 <c>true</c>로 바꾼다.
+ */
+const ready = false
+
+/**
  * 이 사이트의 주소. <b>Vercel이 주소를 내주면 채운다.</b>
  *
  * 비어 있으면 폰 안내가 통째로 안 나온다 — "주소를 복사해 두세요"라고 해 놓고
@@ -96,6 +107,8 @@ const note = computed(() => notes.value[Math.min(noteAt.value, notes.value.lengt
  * 않고 브라우저가 내려받기만 시작하므로, 이벤트가 잘릴 자리가 없다.
  */
 function trackDownload() {
+  if (!ready) return
+
   track('download', { version })
 }
 </script>
@@ -150,8 +163,13 @@ function trackDownload() {
       </div>
 
       <div class="card box">
-        <a class="btn btn-primary" :href="href" @click="trackDownload">
-          {{ t.download.button }}
+        <!-- 아직 안 올라갔으면 눌리지 않는다. <b>감추지 않고 세워 둔다</b> —
+             없으면 받는 자리가 통째로 사라져서, 이 페이지가 무엇을 주는
+             곳인지도 함께 흐려진다. -->
+        <a class="btn btn-primary" :class="{ 'is-pending': !ready }"
+           :href="ready ? href : undefined" :aria-disabled="!ready"
+           @click="trackDownload">
+          {{ ready ? t.download.button : t.download.pending }}
         </a>
 
         <p class="meta">
@@ -188,6 +206,16 @@ function trackDownload() {
      하나</b>로 묻힌다. 배경은 그대로 둔다 — 선 하나만 올리면 "여기가
      그 자리"까지만 말하고, 면까지 밝히면 카드가 단추처럼 보인다. */
   border-color: #33405a;
+}
+
+/* 아직 못 받는 단추. <b>자리와 크기는 그대로</b> 두고 채도만 뺀다 — 흐리게
+   만들어 옆으로 밀면 "곧 생긴다"가 아니라 "여기는 아니다"로 읽힌다. */
+.is-pending {
+  background: var(--bg-card);
+  border: 1px solid #33405a;
+  color: var(--text);
+  cursor: default;
+  box-shadow: none;
 }
 
 /* ---------- 업데이트 내역 ---------- */

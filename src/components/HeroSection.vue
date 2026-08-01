@@ -32,8 +32,13 @@ const shot = '/screenshots/hero.png'
 
       <p class="tagline">{{ t.hero.tagline }}</p>
 
-      <a class="btn btn-primary" href="#download">{{ t.hero.cta }}</a>
-      <p class="note">{{ t.hero.ctaNote }}</p>
+      <!-- 위쪽 다운로드 단추와 "Windows 10 · 11" 줄은 뺐다(2026-08-01).
+           받는 자리는 아래에 제대로 있고, 여기 있던 것은 <b>거기로 데려가는
+           단추</b>였다 — 한 화면에 다 들어오는 길이의 페이지에서 같은 곳을
+           가리키는 문이 둘이면 하나는 길 안내가 아니라 소음이다.
+           요구 사양도 받기 직전에 읽는 것이라 아래에 붙어 있어야 한다.
+           위쪽 메뉴의 "다운로드"는 그대로 둔다 — 스크롤을 내리는 중에도
+           늘 보이는 자리라 성격이 다르다. -->
 
       <figure class="shot">
         <img
