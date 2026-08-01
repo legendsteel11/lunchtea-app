@@ -45,14 +45,13 @@ function trackDownload() {
           <span>{{ size }}</span>
           <span class="dot">·</span>
           <span>{{ t.download.requirements }}</span>
+          <!-- GitHub으로 보내는 링크는 뺐다. 받으러 온 사람에게 <b>다른 데로
+               가는 문</b>을 열어 주면, 받는 대신 그쪽을 구경하다 나간다. -->
+
         </p>
 
         <p class="install" v-html="t.download.install"></p>
         <p class="first-run" v-html="t.download.firstRun"></p>
-
-        <a class="github" :href="repo" target="_blank" rel="noopener">
-          {{ t.download.github }}
-        </a>
       </div>
     </div>
   </section>
@@ -95,15 +94,4 @@ function trackDownload() {
   opacity: 0.8;
 }
 
-.github {
-  display: inline-block;
-  margin-top: 22px;
-  font-size: 13px;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.github:hover {
-  text-decoration: underline;
-}
 </style>

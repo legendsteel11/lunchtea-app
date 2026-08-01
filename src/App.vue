@@ -6,7 +6,7 @@ import ComingSoonSlots from './components/ComingSoonSlots.vue'
 import AboutSection from './components/AboutSection.vue'
 import PlaySection from './components/PlaySection.vue'
 import DownloadSection from './components/DownloadSection.vue'
-import RoadmapSection from './components/RoadmapSection.vue'
+import NoticeSection from './components/NoticeSection.vue'
 import AppFooter from './components/AppFooter.vue'
 
 inject()
@@ -20,7 +20,7 @@ inject()
     <AboutSection />
     <PlaySection />
     <DownloadSection />
-    <RoadmapSection />
+    <NoticeSection />
   </main>
   <AppFooter />
 </template>

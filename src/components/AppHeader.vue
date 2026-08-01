@@ -6,14 +6,13 @@ import { t, toggleLang } from '../i18n'
   <header>
     <div class="container bar">
       <a class="brand" href="#top">
-        <span class="mark" aria-hidden="true"></span>
+        <img class="mark" src="/logo.png" alt="" width="24" height="24" />
         <span class="name">LunchTea</span>
       </a>
 
       <nav>
         <a href="#about">{{ t.nav.about }}</a>
         <a href="#play">{{ t.nav.play }}</a>
-        <a href="#roadmap">{{ t.nav.roadmap }}</a>
         <a class="cta" href="#download">{{ t.nav.download }}</a>
       </nav>
 
@@ -52,13 +51,13 @@ header {
   letter-spacing: -0.01em;
 }
 
-/* 아이콘 대신 네모 하나. 이 게임의 적이 전부 네모라 그것으로 표를 삼는다. */
 .mark {
-  width: 13px;
-  height: 13px;
-  border-radius: 3px;
-  background: var(--accent);
-  box-shadow: 0 0 12px rgba(110, 168, 255, 0.55);
+  width: 24px;
+  height: 24px;
+
+  /* 어두운 판 위에 파란 로고라 가장자리가 배경에 묻는다. 아주 옅은 빛을
+     둘러 띄운다 — 테두리를 그리면 아이콘에 상자를 씌운 꼴이 된다. */
+  filter: drop-shadow(0 0 6px rgba(110, 168, 255, 0.35));
 }
 
 nav {

@@ -26,8 +26,8 @@ const shot = '/screenshots/hero.gif'
       <p class="eyebrow">{{ t.hero.eyebrow }}</p>
 
       <h1>
-        {{ t.hero.title }}
-        <span class="sub">{{ t.hero.sub }}</span>
+        <img class="logo" src="/logo.png" alt="" width="56" height="56" />
+        <span>{{ t.hero.title }}</span>
       </h1>
 
       <p class="tagline">{{ t.hero.tagline }}</p>
@@ -68,21 +68,21 @@ const shot = '/screenshots/hero.gif'
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   margin-top: 10px;
   font-size: clamp(38px, 7vw, 60px);
   line-height: 1.1;
 }
 
-/* 부제는 줄을 바꿔 아래에 둔다. 옆에 붙이면 이름이 두 단어처럼 읽힌다 —
-   받는 사람이 부르는 이름은 LunchTea 하나다. */
-.sub {
-  display: block;
-  margin-top: 8px;
-  font-size: clamp(15px, 2.4vw, 19px);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text);
+/* 로고는 글자 크기를 따라간다. px로 박아 두면 좁은 화면에서 이름만 줄고
+   그림은 그대로라 둘이 따로 논다. */
+.logo {
+  width: clamp(42px, 7.4vw, 64px);
+  height: auto;
+  filter: drop-shadow(0 0 14px rgba(110, 168, 255, 0.3));
 }
 
 .tagline {
