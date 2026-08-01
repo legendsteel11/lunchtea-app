@@ -36,6 +36,7 @@ const dict = {
     about: {
       title: '런치티란?',
       lead: '일하는 화면 한켠에 띄워 두는 작은 소품 모음입니다.',
+      leadSub: '잠시 시간이 날 때 한 손으로 차를 마시며 만지작거릴 수 있어요.',
       items: [
         {
           title: '기다리는 시간에',
@@ -78,6 +79,7 @@ const dict = {
         ['P', '창 위치'],
         ['M / F11', '소리 켜기·끄기'],
         ['F12', '볼륨'],
+        ['B', '기록 보기'],
         ['Shift + Esc', '종료'],
       ],
       menuNote: '제목 표시줄을 우클릭하면 설정을 바꾸거나 단축키를 볼 수 있습니다.',
@@ -133,6 +135,7 @@ const dict = {
     about: {
       title: 'What is LunchTea?',
       lead: 'A set of small things you keep open in a corner of your screen while you work.',
+      leadSub: 'When you have a moment, poke at it with one hand while the other holds your tea.',
       items: [
         {
           title: 'For the waiting',
@@ -175,6 +178,7 @@ const dict = {
         ['P', 'Window position'],
         ['M / F11', 'Sound on/off'],
         ['F12', 'Volume'],
+        ['B', 'View records'],
         ['Shift + Esc', 'Quit'],
       ],
       menuNote: 'Right-click the title bar to change settings or see the shortcuts.',

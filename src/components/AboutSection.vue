@@ -9,7 +9,12 @@ import { t } from '../i18n'
            나오면 각 칸은 읽히는데 전체가 뭔지는 끝까지 안 잡힌다. -->
       <div class="section-heading">
         <h2>{{ t.about.title }}</h2>
+
+        <!-- 두 <b>문단</b>으로 둔다. 한 줄에 <c>\n</c>을 넣고 CSS로 접는
+             방법도 있는데, 그러면 좁은 화면에서 저절로 접히는 자리와
+             일부러 접은 자리가 섞여 어디서 끊긴 것인지 안 갈린다. -->
         <p>{{ t.about.lead }}</p>
+        <p class="lead-sub">{{ t.about.leadSub }}</p>
       </div>
 
       <div class="grid">
@@ -36,6 +41,12 @@ import { t } from '../i18n'
 
 .item {
   padding: 22px 22px 24px;
+}
+
+/* 둘째 줄은 첫 줄에 붙여 둔다. 문단 사이 여백이 그대로면 두 이야기로
+   보이는데, 이건 한 이야기를 두 줄로 적은 것이다. */
+.lead-sub {
+  margin-top: 2px;
 }
 
 .item h3 {
