@@ -52,8 +52,8 @@ const shot = '/screenshots/hero.png'
 
 <style scoped>
 .hero {
-  padding-top: 56px;
-  padding-bottom: 24px;
+  padding-top: 40px;
+  padding-bottom: 12px;
 }
 
 .inner {
@@ -97,7 +97,7 @@ h1 {
 }
 
 .shot {
-  margin: 40px auto 0;
+  margin: 30px auto 0;
 
   /* 놀이판이 정사각형이라 그림도 정사각형에 가깝다. 폭을 넓게 두면
      양옆이 남아서 <b>가운데 작은 그림</b>이 된다. */
