@@ -3,21 +3,40 @@ import { ref } from 'vue'
 import { t } from '../i18n'
 
 /**
- * 히어로 그림이 아직 없을 수도 있다.
- *
- * <b>없을 때 자리를 비워 두지 않는다.</b> 이 그림이 이 페이지에서 제일 큰 자리라,
- * 비면 화면 한가운데가 뚫린 것으로 보인다. 파일이 들어오면 그대로 그림이 되고,
- * 없으면 놀이판을 흉내 낸 네모가 대신 선다 — <c>public/screenshots/hero.gif</c>에
- * 넣으면 코드는 손댈 것이 없다.
- */
-const missing = ref(false)
-
-/**
  * <b>주소를 문자열로 묶어 넘긴다.</b> 템플릿에 <c>src="/..."</c>로 곧장 적으면 Vite가
  * 그것을 빌드 때 챙길 파일로 보고 찾다가, 없으면 <b>빌드가 실패한다</b>. 이 그림은
- * 나중에 들어올 수 있으므로 그러면 안 된다 — 묶어서 넘기면 그냥 주소로 지나간다.
+ * 나중에 갈아 끼울 수 있으므로 그러면 안 된다 — 묶어서 넘기면 그냥 주소로 지나간다.
  */
-const shot = '/screenshots/hero.png'
+/**
+ * 형식은 mp4 <b>하나만</b> 둔다.
+ *
+ * webm을 함께 두고 <c>&lt;source&gt;</c>로 고르게 하는 것이 흔한 방법이지만, 여기서는
+ * 재 봤더니 이득이 없었다 — 같은 화질로 맞췄을 때 VP9가 H.264보다 <b>오히려 컸다</b>
+ * (1.08MB 대 1.05MB). 어두운 밤하늘 그라데이션이 많아서 그런 것으로 보인다. 이득이
+ * 없으면 파일 두 벌은 그냥 관리할 것이 하나 더 느는 것이다.
+ */
+const clip = '/screenshots/hero.mp4'
+const poster = '/screenshots/hero-poster.jpg'
+
+/**
+ * 히어로 자리가 무엇을 보여 줄지. 영상 → 스틸 → 네모 순으로 <b>한 칸씩 내려간다.</b>
+ *
+ * <b>이 자리를 비워 두지 않는다.</b> 페이지에서 제일 큰 자리라, 비면 화면 한가운데가
+ * 뚫린 것으로 보인다. 그래서 파일이 없거나 코덱을 못 읽으면 그냥 실패하는 대신
+ * 포스터 한 장으로 내려가고, 그것마저 없으면 놀이판을 흉내 낸 네모가 선다.
+ *
+ * 움직임을 줄여 달라고 해 둔 사람에게는 처음부터 스틸로 시작한다 — 28초짜리가
+ * 끝없이 도는 것은 <b>멈출 수 없는 애니메이션</b>이고, 그 설정이 막으려는 것이 바로
+ * 그것이다.
+ */
+type Stage = 'clip' | 'still' | 'none'
+
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const stage = ref<Stage>(reduced ? 'still' : 'clip')
+
+function stepDown() {
+  stage.value = stage.value === 'clip' ? 'still' : 'none'
+}
 </script>
 
 <template>
@@ -41,11 +60,25 @@ const shot = '/screenshots/hero.png'
            늘 보이는 자리라 성격이 다르다. -->
 
       <figure class="shot">
+        <!-- 소리가 없는 영상이다(오디오 트랙 자체가 없다). 그래도 muted를 적는다 —
+             브라우저는 트랙 유무를 보는 것이 아니라 이 표시를 보고 자동 재생을
+             허락한다. playsinline이 없으면 iOS가 전체 화면으로 띄워 버린다. -->
+        <video
+          v-if="stage === 'clip'"
+          :src="clip"
+          :poster="poster"
+          :aria-label="t.hero.shot"
+          autoplay
+          muted
+          loop
+          playsinline
+          @error="stepDown"
+        ></video>
         <img
-          v-if="!missing"
-          :src="shot"
+          v-else-if="stage === 'still'"
+          :src="poster"
           :alt="t.hero.shot"
-          @error="missing = true"
+          @error="stepDown"
         />
         <div v-else class="placeholder" aria-hidden="true">
           <span class="dot" v-for="n in 5" :key="n"></span>
@@ -104,18 +137,20 @@ h1 {
 .shot {
   margin: 30px auto 0;
 
-  /* 놀이판이 정사각형이라 그림도 정사각형에 가깝다. 폭을 넓게 두면
-     양옆이 남아서 <b>가운데 작은 그림</b>이 된다. */
-  width: min(560px, 100%);
+  /* 원본이 720×480이다. 이보다 넓히면 늘려 그리는 것이라 글자부터 흐려진다 —
+     여기 찍힌 것은 코드 편집기와 파일 목록이라 흐려지면 바로 티가 난다. */
+  width: min(720px, 100%);
 }
 
+.shot video,
 .shot img,
 .placeholder {
+  display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
 
-  /* 모서리를 안 굴린다. 이 그림은 <b>창 하나를 통째로 찍은 것</b>이라,
-     굴리면 창이 아니라 카드로 보인다 — 실제 화면에서는 네모난 창이다. */
+  /* 모서리를 안 굴린다. 이 그림은 <b>화면을 통째로 찍은 것</b>이라, 굴리면
+     화면이 아니라 카드로 보인다 — 실제로는 네모난 모니터 안이다. */
   border: 1px solid var(--border);
   background: #090c12;
   object-fit: cover;

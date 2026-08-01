@@ -25,7 +25,7 @@ const dict = {
       eyebrow: 'Windows 데스크톱 토이 프로젝트',
       title: 'LunchTea',
       tagline: '작업 중 기다려야 할 때, 잠깐 차 한잔 하고 가세요.',
-      shot: '화면',
+      shot: '작업 화면 한켠에서 돌아가고 있는 런치티',
     },
     soon: {
       title: '앞으로 계속 추가될 예정입니다',
@@ -159,7 +159,7 @@ const dict = {
       eyebrow: 'A desktop toy project for Windows',
       title: 'LunchTea',
       tagline: 'While you wait on something at work, stop by for a cup of tea.',
-      shot: 'Screen',
+      shot: 'LunchTea running in a corner of a working screen',
     },
     soon: {
       title: 'More will keep being added',
