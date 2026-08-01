@@ -85,8 +85,9 @@ const dict = {
       menuNote: '제목 표시줄을 우클릭하면 설정을 바꾸거나 단축키를 볼 수 있습니다.',
     },
     download: {
-      title: '다운로드',
-      button: '내려받기',
+      // 섹션 제목은 뺐다(2026-08-01). 위쪽 메뉴·제목·단추에 같은 말이 세 번
+      // 겹쳤고, 받는 자리는 단추 하나로 이미 분명하다.
+      button: '다운로드',
       version: '버전',
       requirements: 'Windows 10 · 11 (64-bit)',
       install: '설치가 필요 없습니다. 압축을 풀고 <code>LunchTea.exe</code>를 누르면 바로 시작합니다.',
@@ -215,7 +216,6 @@ const dict = {
       menuNote: 'Right-click the title bar to change settings or see the shortcuts.',
     },
     download: {
-      title: 'Download',
       button: 'Download',
       version: 'Version',
       requirements: 'Windows 10 · 11 (64-bit)',

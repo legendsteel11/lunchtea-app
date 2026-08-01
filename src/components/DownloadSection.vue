@@ -103,9 +103,11 @@ function trackDownload() {
 <template>
   <section id="download" class="download">
     <div class="container">
-      <div class="section-heading">
-        <h2>{{ t.download.title }}</h2>
-      </div>
+      <!-- 섹션 제목("다운로드")은 뺐다. <b>같은 말이 세 번 겹쳤다</b> —
+           위쪽 메뉴에 한 번, 여기 제목에 한 번, 단추에 또 한 번. 받는
+           자리는 단추 하나로 이미 분명하고, 제목은 그 위에 한 칸을 더
+           얹어 단추를 아래로 밀 뿐이었다. 메뉴에서 눌러 오는 자리라
+           <c>id="download"</c>는 그대로 둔다. -->
 
       <!-- 이번 판에 무엇이 생겼는가. 단추 바로 위에 둔다 — 받을지 정하기
            직전에 보는 자리라 <b>새로 생긴 기능만</b> 올린다. 고친 자리와
