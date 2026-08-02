@@ -89,9 +89,12 @@ function stepDown() {
 </template>
 
 <style scoped>
+/* 아래 여백이 <b>0이다.</b> 바로 밑 토이 칸 줄이 <c>--gap-tile</c>만큼만
+   띄우고 붙어 서므로, 여기서 한 번 더 띄우면 그만큼 더해져 벌어진다.
+   틈은 아래쪽 한 곳에서만 준다. */
 .hero {
   padding-top: 40px;
-  padding-bottom: 12px;
+  padding-bottom: 0;
 }
 
 .inner {

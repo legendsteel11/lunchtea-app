@@ -32,6 +32,12 @@
      하나가 잘못 놓인 것처럼 보인다. */
   --panel: 660px;
 
+  /* 네모들 사이의 틈. 토이 칸 넷 사이도 이 값이고, <b>히어로 화면과 그
+     줄 사이도 같은 값</b>이다 — 그래야 화면 한 장과 칸 넷이 따로 놓인 두
+     덩이가 아니라 한 판에 같이 깔린 것으로 읽힌다. 두 곳에 숫자를 따로
+     적으면 언젠가 한쪽만 바뀌어 어긋난다. */
+  --gap-tile: 14px;
+
   color-scheme: dark;
   font: 16px/1.7 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
