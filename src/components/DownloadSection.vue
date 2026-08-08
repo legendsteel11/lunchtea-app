@@ -10,7 +10,7 @@ import { t } from '../i18n'
  * 조용히 404</b>가 되고, 그건 눌러 보기 전에는 아무 데도 안 나타난다.
  */
 const repo = 'https://github.com/legendsteel11/lunchtea-app'
-const version = '0.7.0'
+const version = '0.8.0'
 const size = '30 MB'
 
 const file = `LunchTea-${version}-win-x64.zip`
