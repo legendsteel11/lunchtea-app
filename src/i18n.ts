@@ -118,7 +118,7 @@ const dict = {
         {
           version: '0.8.0',
           items: [
-            '커서를 창 밖으로 빼면 보스가 물러나는데, 혼자 있던 시간만큼 몸을 때우고 돌아옵니다. 잠깐 나갔다 오면 아주 조금, 오래 자리를 비우면 그만큼 더.',
+            '커서를 창 밖으로 빼면 보스가 물러나는데, 혼자 있던 시간만큼 약간 회복하고 돌아옵니다.',
           ],
         },
       ] as Array<{ version: string; items: string[] }>,
@@ -242,7 +242,7 @@ const dict = {
         {
           version: '0.8.0',
           items: [
-            'A boss that retreats while the cursor is away now comes back partly repaired — a little for a short break, more for a long one.',
+            'A boss that retreats while the cursor is away now comes back slightly recovered.',
           ],
         },
       ] as Array<{ version: string; items: string[] }>,
